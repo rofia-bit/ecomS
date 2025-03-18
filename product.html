@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icon mlfoug-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- swiper css from mit--> 
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>ecom site</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo" title="Home">
+                Hephaestus Made<i class='bx bx-planet'></i>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#products" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#new" class="nav__link">New</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Cart Dropdown -->
+                <div class="cart-dropdown">
+                    <button class="cart-btn">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <div class="cart-content">
+                        <div class="cart-items">
+                            <!-- Cart items will appear here -->
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span class="total-price">$0.00</span>
+                        </div>
+                        <a href="checkout.html" class="checkout-btn">Checkout</a>
+                    </div>
+                </div>
+
+                <!-- Toggle Button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <div class="theme-toggle" id="themeToggle">
+                <i class='bx bx-moon'></i>
+            </div>
+        </nav>
+    </header>
+        <!--==================== PRODUCT DETAILS ====================-->
+        <main class="product-details-page">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &gt; <span id="product-category">Category</span> &gt; <span id="product-name">Product Name</span>
+            </div>
+    
+            <!-- Product Details Container -->
+            <div class="product-details-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images" id="thumbnail-container">
+                        <!-- Thumbnail images will be loaded here -->
+                    </div>
+                </div>
+    
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 id="product-title">Product Name</h1>
+                    <p class="product-price" id="product-price">$0.00</p>
+                    <div class="product-description" id="product-description">
+                        <p>Product description will be loaded here.</p>
+                    </div>
+    
+                    <!-- Size Options -->
+                    <div class="product-sizes">
+                        <h3>Select Size</h3>
+                        <div class="size-options" id="size-options">
+                            <!-- Size options will be loaded here -->
+                        </div>
+                    </div>
+    
+                    <!-- Quantity Selector -->
+                    <div class="quantity-selector">
+                        <h3>Quantity</h3>
+                        <div class="quantity-control">
+                            <button id="decrease-quantity">-</button>
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" value="1" min="1" max="10" title="Enter quantity" placeholder="1">
+                            <button id="increase-quantity">+</button>
+                        </div>
+                    </div>
+    
+                    <!-- Add to Cart Button -->
+                    <button class="btn btn-primary" id="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+    
+            <!-- Related Products -->
+            <section class="related-products">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="products-container" id="related-products-container">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </section>
+        </main>
+    
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our Information</h3>
+                <ul class="footer__list">
+                    <li>blah blah blah</li>
+                    <li>blah blh blah</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">About Us</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">our number</a></li>
+                    <li><a href="#" class="footer__link">our store</a></li>
+                    <li><a href="#" class="footer__link">About Us</a></li>
+                    <li><a href="#" class="footer__link">Copy Right</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+                <ul class="footer__social">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer__social-link" title="Facebook">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener" class="footer__social-link" title="Twitter">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer__social-link" title="Instagram">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">&#169; Dorsaf Rofia. All rights reserved</span>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up" title="Scroll up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="js/product.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

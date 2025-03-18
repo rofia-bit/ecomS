@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icon mlfoug-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>ecom site</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo" title="Home">
+                Hephaestus Made<i class='bx bx-planet'></i>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#products" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#new" class="nav__link">New</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+            <div class="nav__btns">
+
+                <div class="cart-dropdown">
+                    <button class="cart-btn">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <div class="cart-content">
+                        <div class="cart-items">
+                            <!-- Cart items will appear here -->
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span class="total-price">$0.00</span>
+                        </div>
+                        <button class="checkout-btn">Checkout</button>
+                    </div>
+                    </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+            </div>    
+            <!-- Theme Toggle -->
+<div class="theme-toggle" id="themeToggle">
+    <i class='bx bx-moon' ></i>
+</div>
+        </nav>
+    </header>
+
+    <main class="checkout-page">
+        <div class="checkout-container">
+          <div class="checkout-header">
+            <h1>Checkout</h1>
+            <div class="checkout-steps">
+              <div class="step active">
+                <span class="step-number">1</span>
+                <span class="step-name">Shipping</span>
+              </div>
+              <div class="step-divider"></div>
+              <div class="step">
+                <span class="step-number">2</span>
+                <span class="step-name">Review & Pay</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="checkout-content">
+            <div class="checkout-form-container">
+              <div class="form-section">
+                <h2>Contact Information</h2>
+                <form id="shipping-form" class="modern-form">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="fullname">Full Name</label>
+                      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                  </div>
+  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" id="phone" name="phone" placeholder="05XX XXX XXX" required>
+                    </div>
+                  </div>
+  
+                  <h2>Shipping Address</h2>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Street address, apartment, etc." required>
+                  </div>
+  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="wilaya">Wilaya</label>
+                      <select id="wilaya" name="wilaya" required>
+                        <option value="">Select Wilaya</option>
+                        <!-- Options will be added via JavaScript -->
+                      </select>
+                      <div class="select-icon"></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="city">Baladya</label>
+                      <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                    </div>
+                  </div>
+  
+                  <h2>Shipping Method</h2>
+                  <div class="shipping-method">
+                    <div class="shipping-option">
+                      <input type="radio" id="yalidine" name="shipping-method" value="yalidine" checked>
+                      <div class="option-content">
+                        <label for="yalidine">
+                          <div class="shipping-logo">
+                            <img src="img/yali.png" alt="Yalidine Logo">
+                          </div>
+                          <div class="shipping-details">
+                            <span class="shipping-name">Yalidine Express</span>
+                            <span class="shipping-info">1-3 jours</span>
+                          </div>
+                        </label>
+                        <span class="shipping-price" id="yalidine-price">600 DA</span>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <h2>Payment Method</h2>
+                  <div class="payment-methods">
+                    <div class="payment-option">
+                      <input type="radio" id="cash-delivery" name="payment-method" value="cash" checked>
+                      <div class="option-content">
+                        <label for="cash-delivery">
+                          <div class="payment-icon cash-icon"></div>
+                          <div class="payment-details">
+                            <span class="payment-name">Cash on Delivery</span>
+                            <span class="payment-info">selek ki yoslek el coli</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="payment-option disabled">
+                      <input type="radio" id="card-payment" name="payment-method" value="card" disabled>
+                      <div class="option-content">
+                        <label for="card-payment">
+                          <div class="payment-icon card-icon"></div>
+                          <div class="payment-details">
+                            <span class="payment-name">Carte al dahabia</span>
+                            <span class="payment-info">Coming soon</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-actions">
+                    <a href="index.html" class="btn btn-outline">Return to shopping</a>
+                    <button type="submit" class="btn btn-primary">Place Order</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+  
+            <div class="order-summary">
+              <h2>Order Summary</h2>
+              <div id="checkout-items" class="checkout-items">
+                <!-- Checkout items will be loaded here -->
+              </div>
+              
+              <div class="summary-details">
+                <div class="summary-row">
+                  <span>Subtotal</span>
+                  <span id="checkout-subtotal">0.00da</span>
+                </div>
+                <div class="summary-row">
+                  <span>Shipping</span>
+                  <span id="checkout-shipping">0.00da</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-row total">
+                  <span>Total</span>
+                  <span id="checkout-total">0.00da</span>
+                </div>
+              </div>
+  
+              <div class="secure-checkout">
+                <div class="secure-icon"></div>
+                <p>Your personal data will be used to process your order, support your experience, and for other purposes described in our privacy policy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--==================== NEWSLETTER ====================-->
+    <section class="newsletter section container">
+        <div class="newsletter__bg grid">
+            <div>
+                <h2 class="newsletter__title">Subscribe Our <br> Newsletter</h2>
+                <p class="newsletter__description">
+                    Don't miss out on your discounts. Subscribe to our email 
+                    newsletter to get the best offers, discounts, coupons, 
+                    gifts and much more.
+                </p>
+            </div>
+
+            <form action="" class="newsletter__subscribe">
+                <input type="email" placeholder="Enter your email" class="newsletter__input">
+                <button type="submit" class="button">
+                    SUBSCRIBE
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <div class="footer__content">
+            <h3 class="footer__title">Our Information</h3>
+            <ul class="footer__list">
+                <li>blah blah blah</li>
+                <li>blah blh blah</li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">About Us</h3>
+            <ul class="footer__links">
+                <li><a href="#" class="footer__link">our number</a></li>
+                <li><a href="#" class="footer__link">our store</a></li>
+                <li><a href="#" class="footer__link">About Us</a></li>
+                <li><a href="#" class="footer__link">Copy Right</a></li>
+            </ul>
+        </div>
+
+
+        <div class="footer__content">
+            <h3 class="footer__title">Social</h3>
+            <ul class="footer__social">
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer__social-link" title="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener" class="footer__social-link" title="Twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer__social-link" title="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <span class="footer__copy">&#169; Dorsaf Rofia. All rights reserved</span>
+</footer>
+<!--=============== SCROLL UP ===============-->
+<a href="#" class="scrollup" id="scroll-up" title="Scroll up"> >
+    <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+</a>
+
+<!--=============== MAIN JS ===============-->
+<script src="js/main.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
